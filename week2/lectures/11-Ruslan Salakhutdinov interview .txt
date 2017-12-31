@@ -1,0 +1,216 @@
+Welcome, Rus, I'm really glad
+you could join us here today. >> Thank you, thank you Andrew. >> So today you're the director
+of research at Apple, and you also have a faculty, a professor for
+Carnegie Mellon University. So I'd love to hear a bit
+about your personal story. How did you end up doing this
+deep learning work that you do? Yeah, it's actually,
+to some extent it was, I started in deep learning
+to some extent by luck. I did my master's degree at Toronto,
+and then I took a year off. I was actually working
+in the financial sector. It's a little bit surprising. And at that time, I wasn't quite sure
+whether I want to go for my PhD or not. And then something happened,
+something surprising happened. I was going to work one morning,
+and I bumped into Geoff Hinton. And Geoff told me, hey,
+I have this terrific idea. Come to my office, I'll show you. And so, we basically walked together and
+he started telling me about these Boltzmann Machines and contrasting
+divergence, and some of the tricks which I didn't at that time quite
+understand what he was talking about. But that really, really excited, that
+was very exciting and really excited me. And then basically, within three
+months I started my PhD with Geoff. So that was kind of the beginning,
+because that was back in 2005, 2006. And this is where some of the original
+deep learning algorithms, using Restricted Boltz Machines, unsupervised
+pre-training, were kind of popping up. And so that's how I started it,
+was really. That one particular morning when
+I bumped into Geoff completely changed my future career moving forward. >> And then in fact you were
+co-author on one of the very early papers on
+Restricted Boltzmann Machines that really helped with this resurgence of
+neural networks and deep learning. Tell me a bit more what that
+was like working on that seminal-
+>> Yeah, this was actually a really, this was exciting, yeah, it was the first year,
+it was my first year as a PGD student. And Geoff and I were trying to explore these ideas
+of using Restricted Boltz Machines and using pre-training tricks
+to train multiple layers. And specifically we were trying
+to focus on auto-encoders, how do we do a non-linear
+extension of PCA effectively? And it was very exciting,
+because we got these systems to work on which was exciting, but
+then the next steps for us were to really see whether we can
+extend these models to dealing with faces. I remember we had this
+Olivetti faces dataset. And then we started looking at can
+we do compression for documents? And we started looking at
+all these different data, real value count, binary,
+and throughout a year, I was a first year PhD student, so
+it was a big learning experience for me. But and really within six or seven months, we were able to get really interesting
+results, I mean really good results. I think that we were able to train
+these very deep auto-encoders. This is something that you couldn't
+do at that time using sort of traditional optimization techniques. And then it turned out into really,
+really exciting period for us. That was super exciting, yeah,
+because it was a lot of learning for me, but at the same time,
+the results turned out to be really, really impressive for
+what we were trying to do. >> So in the early days of those
+researches of deep learning, a lot of the activity was centered on
+Restricted Boltzmann Machines, and then Deep Boltzmann Machines. There's still a lot of exciting
+research there being done, including some in your group, but what's
+happening with Boltzmann Machines and Restricted Boltzmann Machines? >> Yeah, that's a very good question. I think that, in the early days, the way that we
+were using Restricted Boltz Machines is you sort of can imagine training
+a stack of these Restricted Boltz Machines that would allow you to learn
+effectively one layer at a time. And there's a good theory behind
+when you add a particular layer, it can prove variational bound and
+so forth under certain conditions. So there was a theoretical justification,
+and these models were working quite well in terms of
+being able to pre-train these systems. And then around 2009, 2010,
+once the Computes started showing up, GPUs, then a lot of us started realizing
+that actually directly optimizing these deep neural networks was giving similar
+results or even better results. >> So just standard backprop
+without the pre-training or the Restricted Boltz Machine. >> That's right, that's right. And that's sort of over three or
+four years, and it was exciting for the whole community,
+because people felt that wow, you can actually train these deep models
+using these pre-training mechanisms. And then, with more Computes people
+started realizing that you can just basically do standard backpropagation,
+something that we couldn't do back in 2005 or 2004, because it would
+take us months to do it on CPU's. And so that was a big change. The other thing that I think that
+we haven't really figured out what to do with Boltz Machines and
+Deep Boltzmann Machines. I believe they're very powerful models, because you can think of
+them generative models. They're trying to model coupling
+distributions in the data, but when we start looking at learning
+algorithms, learning algorithms right now, they require using Markov Chain Monte
+Carlo and variational learning and such, which is not as scalable as
+backpropagation algorithms. So we yet have to figure out more
+efficient ways of training these models, and also the use of convolution, it's something that's fairly difficult
+to integrate into these models. I remember some of your work on
+using probabilistic max pooling for sort of building these generative
+models of different objects, and using these ideas of convolution
+was also very, very exciting, but at the same time, it's still extremely
+hard to train these models, so. >> How likely is work? >> Yes, how likely is work, right? And so we still have to figure out where. On the other side, some of the recent
+work using variational auto-encoders, for example, which could be viewed as
+interactive versions of Bolzmann Machines. We have figured out ways of training
+these modules, a work by Max Welling and Diederik Kingma,
+on using reparameterization tricks. And now we can use backpropagation
+algorithm within the stochastic system, which is driving a lot
+of progress right now. But we haven't quite figured out how to do
+that in the case of Boltzmann Machines. >> So that's actually a very interesting
+perspective I actually wasn't aware of, which is that in an early era where
+computers were slower, that the RBM, pre-training was really important, it was only faster computation that
+drove switching to standard backprop. In terms of the evolution of the
+community's thinking in deep learning and other topics, I know you spend
+a lot time thinking about this, the generative,
+unsupervised versus supervised approaches. Do you share a bit about how your thinking
+about that has evolved over time? >> Yeah, I think that's a really,
+I feel like it's a very important topic, particularly if we think about
+unsupervised, semi-supervised or generative models because to some extent
+a lot of successes that we've seen recently is due to supervised learning,
+and back in the early days, unsupervised learning was primarily
+viewed as unsupervised pre-training, because we didn't know how to
+train these multi layer systems. And even today, if you're working
+in settings where you have lots and lots of unlabeled data and
+a small fraction of labeled examples, these unsupervised pre-training models, building these generative models,
+can help for supervised eyes. So I think that a lot of us in
+the community, it kind of was the belief. When I started doing my PhD, was all about
+generative models and trying to learn these stacks of model because that was the
+only way for us to train these systems. Today, there is a lot of work
+right now in generative modeling. If you look at
+Generative Adversarial Networks. If you look at variational auto-encoders, deep energy models is something that
+my lab is working on right now as well. I think it's very exciting research, but
+perhaps we haven't quite figured it out, again, for many of you who are thinking
+about getting into deep learning field, this is one area that's,
+I think we'll make a lot of progress in, hopefully in the near future. >> So, unsupervised learning. >> Unsupervised learning, right. Or maybe you can think of it
+as unsupervised learning, or semi-supervised learning, where you have,
+I give you some hints or some examples of what different things mean and I throw
+you lots and lots of unlabeled data. >> So that was actually a very important
+insight that in an earlier era of deep learning where
+computers where just slower, the Restricted Boltzmann Machine and
+Deep Boltzmann Machine that was needed for initializing the neural network weights,
+but as computers got faster, straight backprop then
+started to work much better. So one other topic that I know you
+spend a lot of time thinking about is the supervised learning versus generative
+models, unsupervised learning approaches. So how does your, tell me a bit about how your thinking
+on that debate has evolved over time? >> I think that we all believe that we
+should be able to make progress there. It's just all the work on Boltz machines,
+variational auto-encoders, GANs. You think a lot of these models
+as generative models, but we haven't quite figured it out
+how to really make them work and how can you make use of large moments. And even for, I see a lot of in IT sector,
+companies have lots and lots of data, lots of unlabeled data,
+lots of efforts for going through annotations
+because that's the only way for us to make progress right now. And it seems like we should be able to make use of unlabeled data because
+it's just abundance of it. And we haven't quite figured
+out how to do that yet. >> So you mentioned for people wanting
+to enter deep learning research, unsupervised learning is exciting area. Today there are a lot of people
+wanting to enter deep learning, either research or applied work,
+so for this global community, either research or applied work,
+what advice would you have? >> Yes, I think that one of
+the key advices I think I should give is people entering that field, I would encourage them to
+just try different things and not be afraid to try new things, and
+not be afraid to try to innovate. I can give you one example, which is when I was a graduate student,
+we were looking at neural nets, and these are highly non-convex
+systems that are hard to optimize. And I remember talking to my friends
+within the optimization community. And the feedback was always that, well,
+there's no way you can solve these problems because these are non-convex,
+we don't understand optimization, how could you ever even do that
+compared to doing convex optimization? And it was surprising,
+because in our lab we never really cared that much about
+those specific problems. We're thinking about
+how can we optimize and whether we can get interesting results. And that effectively was
+driving the community so we we're not scared,
+maybe to some extent because we were lacking actually the theory
+behind optimization. But I would encourage
+people to just try and not be afraid to try to
+tackle hard problems. >> Yeah, and I remember you once said,
+don't learn to code just into high level deep learning frameworks, but
+actually understand deep learning. >> Yes, that's right. I think that it's one of the things that
+I try to do when I teach a deep learning class is, one of the homeworks,
+I'm asking people to actually code backpropogation algorithms for
+convolutional neural networks. And it's painful, but
+at the same time, if you do it once, you'll really understand how these
+systems operate, and how they work. And how you can efficiently
+implement them on GPU, and I think it's important for you to,
+when you go into research or industry, you have a really good understanding
+of what these systems are doing. So it's important, I think. >> Since you have both academic
+experience as professor, and corporate experience, I'm curious,
+if someone wants to enter deep learning, what are the pros and cons of doing
+a PhD versus joining a company? >> Yeah, I think that's
+actually a very good question. In my particular lab,
+I have a mix of students. Some students want to go and
+take an academic route. Some students want to go and
+take an industry route. And it's becoming very challenging because
+you can do amazing research in industry, and you can also do amazing
+research in academia. But in terms of pros and
+cons, in academia, I feel like you have more freedom to work
+on long-term problems, or if you think about some crazy problem, you can work on
+it, so you have a little bit more freedom. At the same time the research that you're
+doing in industry is also very exciting because in many cases with
+your research you can impact millions of users if you
+develop a core AI technology. And obviously,
+within the industry you have much more resources in terms of Compute, and
+be able to do really amazing things. So there are pluses and minuses,
+it really depends on what you want to do. And right now it's interesting, very interesting environment where
+academics move to industry, and then folks from industry move to academia,
+but not as much. And so it's, it's very exciting times. >> It sounds like academic machine
+learning is great and corporate machine learning is great, and the most
+important thing is just jump in, right? Either one, just jump in. >> It really depends on your preferences
+because you can do amazing research in either place. >> So you've mentioned unsupervised
+learning is one exciting frontier for research. Are there other areas that you consider
+exciting frontiers for research? >> Yeah, absolutely. I think that what I see now,
+in the community right now, particularly in deep learning community,
+is there are a few trends. One particular area I
+think is really exciting is the area of deep
+reinforcement learning. Because we were able to figure out how
+we could train agents in virtual worlds. And this is something that in just
+the last couple of years, you see a lot, of lot of progress, of how can we scale
+these systems, how can we develop new algorithms, how can we get
+agents to communicate to each other, with each other, and
+I think that that area is, and in general, the settings where you're interacting
+with the environment is super exciting. The other area that I think
+is really exciting as well is the area of reasoning and
+natural language understanding. So can we build dialogue-based systems? Can we build systems that can reason,
+that can read text and be able to answer questions intelligently. I think this is something that a lot
+of research is focusing on right now. And then there's another
+sort of sub-area also is this area of being able to
+learn from few examples. So typically people think of it as
+one-shot learning or transfer learning, a setting where you learn
+something about the world, and I throw you a new task at you and
+you can solve this task very quickly. Much like humans do without requiring
+lots and lots of labeled examples. And so this is something that's, a lot of
+us in the community are trying to figure out how we can do that and how can we come
+closer to human-like learning abilities. >> Thank you, Rus, for
+sharing all the comments and insights. That was interesting to see, hearing the story of your
+early days doing this as well. >> [LAUGH].
+Thanks, Andrew, yeah. Thanks for having me.

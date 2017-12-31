@@ -1,16 +1,26 @@
-# Structuring Machine Learning Projects
+## Structuring Machine Learning Projects
 
-Welcome to Structuring Machine Learning Projects! You’re joining thousands of 
-learners currently enrolled in the course. I'm excited to have you in the class 
-and look forward to your contributions to the learning community.
+About this Course
+You will learn how to build a successful machine learning project. If you aspire to be a technical leader in AI, and know how to set direction for your team's work, this course will show you how.
 
-To begin, I recommend taking a few minutes to explore the course site. Review 
-the material we’ll cover each week, and preview the assignments you’ll need to 
-complete to pass the course. Click Discussions to see forums where you can 
-discuss the course material with fellow students taking the class.
+Much of this content has never been taught elsewhere, and is drawn from my experience building and shipping many deep learning products. This course also has two "flight simulators" that let you practice decision-making as a machine learning project leader. This provides "industry experience" that you might otherwise get only after years of ML work experience.
 
-If you have questions about course content, please post them in the forums to 
-get help from others in the course community. For technical problems with the 
-Coursera platform, visit the Learner Help Center.
+After 2 weeks, you will: 
+- Understand how to diagnose errors in a machine learning system, and 
+- Be able to prioritize the most promising directions for reducing error
+- Understand complex ML settings, such as mismatched training/test sets, and comparing to and/or surpassing human-level performance
+- Know how to apply end-to-end learning, transfer learning, and multi-task learning
 
-Good luck as you get started, and I hope you enjoy the course!
+I've seen teams waste months or years through not understanding the principles taught in this course. I hope this two week course will save you months of time.
+
+This is a standalone course, and you can take this so long as you have basic machine learning knowledge. This is the third course in the Deep Learning Specialization.
+
+### WEEK 1
+#### ML Strategy (1)
+13 videos, 1 reading
+###### Graded: Bird recognition in the city of Peacetopia (case study)
+
+### WEEK 2
+#### ML Strategy (2)
+11 videos
+###### Graded: Autonomous driving (case study)

@@ -1,0 +1,226 @@
+So welcome Andrej,
+I'm really glad you could join me today. >> Yeah, thank you for having me. >> So a lot of people already know
+your work in deep learning, but not everyone knows your personal story. So let us start by telling us, how did you end up doing all
+these work in deep learning? >> Yeah, absolutely. So I think my first exposure to deep
+learning once when I was an undergraduate at the University of Toronto. And so Geoff Hinton was there, and
+he was teaching a class on deep learning. And at that time, it was restricted both
+from machines trained on and these digits. And I just really like the way Geoff
+talked about training the network, like the mind of the network,
+and he was using these terms. And I just thought there
+was a flavor of something magical happening when this
+was training on those digits. And so that's my first exposure to it, although I didn't get into it
+in a lot of detail at that time. And then when I was doing my master's
+degree at University of British Columbia, I took a class with and
+that was again on machine learning. And that's the first time I delved
+deeper into these networks and so on. And what was interesting is
+that I was very interested in artificial intelligence, and so
+I took classes in artificial intelligence. But a lot of what I was seeing
+there was just very not satisfying. It was a lot of depth-first search,
+breadth-first search, alpha-beta pruning, and all these things. And I was not understanding how,
+I was not satisfied. And so when I was seeing neural networks
+for the first time in machine learning, which is this term that I
+think is more technical and not as well known in most people
+talk about artificial intelligence. Machine learning was more a technical
+term, I would almost say. And so I was dissatisfied
+with artificial intelligence. When I saw machine learning, I was like, this is the AI that I want to spend time
+on, this is what's really interesting. And that's what took me down
+those directions is that this is almost a new computing paradigm,
+I would say. Because normally, humans write code, but here in this case,
+the optimization writes code. And so you're creating
+the input/out specification, and then you have lots of examples of it,
+and then the optimization writes code, and sometimes it can write
+code better than you. And so I thought that was just a very new
+way of thinking about programming, and that's what intrigued me about it. >> Then through your work, one of
+the things you've come to be known for is that you're now this human benchmark
+for the image classification competition. How did that come about? >> So basically, their ImageNet
+challenge is it's sometimes compared to the world cup of computer vision. So whether people are going to care
+about this benchmark and number, our error rate goes down over time. And it was not obvious to me where
+a human would be on this scale. I've done a similar smaller scale
+experiment on CIFAR-10 dataset earlier. So what I did in CIFAR-10 dataset is I was
+just looking at these 32 x 32 images, and I was trying to classify them myself. At the time,
+this was only ten categories, so it's fairly simple to
+create an interface for it. And I think I had an error
+rate of about 6% on that. And then based on what I was seeing and
+how hard a task was, I think I predicted that the lowest
+error rate we'd achieve would be. Look, okay,
+I can't remember the exact numbers. I think, I guess, 10%, and we're now
+down to 3 or 2% or something crazy. So that was my first fun
+experiment of human baseline. And I thought it was really important for the same purposes that you point
+out in some of your lectures. I mean, you really want that number to
+understand how well humans are doing it, so we can compare machine
+learning algorithms to it. And for ImageNet, it seems that there was
+a discrepancy between how important this benchmark was and how much focus there
+was on getting a lower number and us not even understanding how
+humans are doing on this benchmark. So I created this JavaScript interface,
+and I was showing myself the images, and then the problem with ImageNet is
+you don't have just 10 categories, you have 1,000. It was almost like a UI challenge. Obviously, I can't remember 1,000
+categories, so how do I make it so that it's something fair? And so I listed out all the categories,
+and I gave myself examples of them. And so for each image, I was scrolling
+through 1,000 categories and just trying to see, based on the examples
+I was seeing for each category, what this image might be. And I thought it was an extremely
+instructed exercise by itself. I mean, I did not understand that a third
+of ImageNet is dogs and dog species, and so that was interesting to
+see that network spends a huge amount of time caring about dogs, I think. A third of its performance
+comes from dogs. And yeah, so this was something
+that I did for maybe a week or two. I put everything else on hold. I thought it was a very fun exercise. I got a number in the end, and then I
+thought that one person is not enough. I wanted to have multiple other people,
+and so I was trying to organize within the lab
+to get other people to do the same thing. And I think people are not as willing
+to contribute, say like a week or two of pretty painstaking work, just like
+yeah sitting down for five hours and trying to figure out
+which dog breed this is. And so I was not able to get
+enough data in that respect, but we got at least some approximate
+performance, which I thought was fun. And then this was picked up, and
+it wasn't obvious to me at the time. I just wanted to know the number,
+but this became like a thing. [LAUGH] And people really liked
+the fact that this happened, and refer to jokingly as the reference human. And of course,
+that's hilarious to me, yeah. [LAUGH]
+>> Were you surprised when software, finally surpassed your performance? >> Absolutely. So yeah, absolutely. I mean, especially, sometimes it's really
+hard to see in the image what it is. It's just like a tiny blob of a black
+dot is obviously somewhere there. And I'm not seeing. I'm guessing between like 20 categories,
+and the network just gets it, and I don't understand how that comes about. So there's some superhumanness to it. But also, I think the network is extremely
+good at these kind of statistics of work types and textures. I think in that respect, I was not
+surprised that the network could better measure those fine statistics
+across lots of images. In many cases, I was surprised because
+some of the images require you to read. It's just a bottle, and
+you can't see what it is, but it actually tells you what it is in text. And so as a human, I can read it, and it's
+fine, but the network would have to learn to read to identify the object,
+because it wasn't obvious from it. >> One of the things you've
+become well-known for, and that the deep learning community
+has been grateful to you for, has been your teaching the class and
+putting that online. Tell me a little bit about
+how that came about. >> Yeah, absolutely. So I think I felt very
+strongly that basically, this technology was transformative in
+that a lot of people want to use it. It's almost like a hammer. And what I wanted to do, I was in a position to randomly hand
+out this hammer to a lot of people. And I just found that very compelling. It's not necessarily advisable from
+the perspective of the PhD student, because you're putting
+your research on hold. I mean, this became like 120% of my time. And I had to put all of
+research on hold for maybe, I mean, I thought the class twice,
+and each time, it's maybe four months. And so that time is basically spent
+entirely on the class, so it's not super advisable from that perspective, but
+it was basically the highlight of my PhD. It's not even related to research. I think teaching a class was
+definitely the highlight of my PhD. Just seeing the students, just the fact that they're real excited,
+it was a very different class. Normally, you're being taught things
+that were discovered in 1800 or something like that. But we were able to come to class and say,
+look, there's this paper from a week ago, or even yesterday. And there's new results, and
+I think the undergraduate students and the other students, they just really
+enjoyed that aspect of the class and the fact that they actually understood. So this is not nuclear physics or
+rocket science. This is you need to know calculus,
+and then your algebra, and you can actually understand everything
+that happens under the hood. So I think just the fact that it's so
+powerful, the fact that it keeps changing on a daily basis, people felt right
+they're on the forefront of something big. And I think that's why people
+really enjoy that class a lot. >> And you've really helped a lot
+of people and had a lot of hammers. >> Yeah. >> As someone that's been
+doing deep learning for quite some time now,
+the field is evolving rapidly. I'd be curious to hear,
+how has your own thinking, how has your understanding of deep
+learning changed over these many years? >> Yeah, it's basically like when I was
+seeing Restricted Boltzmann machines for the first time on DIGITS. >> It wasn't obvious to me how this
+technology was going to be used and how big of a deal it would be. And also, when I was starting to work in
+computer vision, convolutional networks, they were around, but they were not
+something that a lot of the computer vision community participated
+using anytime soon. I think the perception was that
+this works for small cases but would never scale for large images. >> And that was just extremely incorrect. [LAUGH] And so basically, I'm just
+surprised by how general technology is and how good the results are. That was largest surprise,
+I would say, and it's not only that. So that's one thing that it worked so
+well on, say, like ImageNet. But the other thing that I think
+no one saw coming, or at least for sure I did not see coming, is that you
+can take these pretrained networks and that you can transfer. You can fine tune them on
+arbitrary other tasks. Because now,
+you're not just solving ImageNet, and you need millions of examples. This also happens to be very
+general feature extractor, and I think that's a second insight that
+I think fewer people saw coming. And there were these papers,
+they are just locked here. All the things that people have
+been working on in computer vision. Sync classification,
+actual recognition, object recognition, base attributes and so on. And people are just crushing each
+task just by fine tuning the network. And so that, to me, was very surprising. >> Yes, and somehow I guess supervised
+learning gets most of the press, and even though pretrained fine-tuning or
+transfer learning is actually working very well, people seem to talk
+less about that for some reason. >> Right, exactly. Yeah, I think what has not worked as much
+is some of these hopes are on unsupervised learning, which I think has been really
+why a lot of researchers have gotten into the field in around 2007 and so on. And I think the promise of that has
+still not been delivered, and I think I find that also surprising is that the
+supervised learning part worked so well. And the enterprise learning,
+it's still in a state of, yeah, it's still not obvious how it's going
+to be used or how that's going to work, even though a lot of people
+are still deep believers, I would say to use the term, in this area
+>> So I know that you're one of the persons who's been thinking
+a lot about the long-term future of AI. Do you want to share
+your thoughts on that? >> So I spent the last maybe year and a half at OpenAI thinking
+a lot about these topics, and it seems to me like the field
+will split into two trajectories. One will be applied AI, which is just
+making these neural networks, training them, mostly with supervised learning,
+potentially unsupervised learning. And getting better, say,
+image recognizers or something like that. And I think the other will be artificial
+general intelligence directions, which is how do you get neural networks that are
+entirely dynamical system that thinks and speaks and can do everything that a human
+can do and has intelligent in that way. And I think that what's been interesting
+is that, for example in computer vision. The way we approached it in the beginning,
+I think, was wrong in that we tried to
+break it down by different parts. So we were like, okay, humans recognize
+people, humans recognize scenes, humans recognize objects. So we're just going to do
+everything that humans do, and then once we have all those things,
+and now we have different areas. And once we have all those things, we're going to figure out
+how to put them together. And I think that was a wrong approach, and we've seen how that going to
+played out historically. And so I think there's something similar
+that's going on that's likely on a higher level with AI. So people are asking, well, okay,
+people plan, people do experiments to figure out how the world works, or people
+talk to other people, so we need language. And people are trying to decompose it
+by function, accomplish each piece, and then put it together
+into some kind of brain. And I just think it's
+just incorrect approach. And so what I've been a much bigger
+fan of is not decomposing that way but having a single kind of neural network
+that is the complete dynamical system that you're always working
+with a full agent. And then the question is, how do you actually create objectives
+such that when you optimize over the weights that make up that brain,
+you get intelligent behavior out? And so that's been something that I've
+been thinking about a lot at OpenAI. I think there are a lot
+of different ways that people have thought about
+approaching this problem. For example, going in a supervised learning direction,
+I have this essay online. It's not an essay,
+it's a short story that I wrote. And the short story tries to come up with
+a hypothetical world of what it might look like if the way we approach this AGI is
+just by scaling up supervised learning, which we know works. And so that gets into something that looks
+like Amazon Mechanical Turk where people associates into lots of robot bodies,
+and they perform tasks, and then we train on that as a supervised
+learning dataset to imitate humans and what that might look like, and so on. And so then there are other directions, like unsurprised learning from algorithmic
+information theory, things like AIXI, or from artificial life, things that'll
+look more like artificial evolution. And so that's what I spend my
+time thinking a lot about. And I think I had the correct answer,
+but I'm not willing to reveal it here. [LAUGH]
+>> I can at least learn more by reading your blog post. >> Yeah, absolutely. >> So you've already given out
+a lot of advice, and today, there are a lot of people still wanting to
+enter the field of AI into deep learning. So for people in that position,
+what advice do you have for them? >> Yeah, absolutely. So I think when people talk to me about
+CS231n and why they thought it was a very useful course, what I keep hearing again
+and again is just people appreciate the fact that we got all the way
+through the low-level details. And they were not working with
+the library, they saw the real code. And they saw how everything
+was implemented, and implemented chunks of it themselves. And so just going all the way down and
+understanding everything under you, it's really important to
+not abstract away things. You need to have a full
+understanding of the whole stack. And that's where I learned the most myself
+as well when I was learning this stuff is just implementing it myself from
+scratch was the most important. It was the piece that I felt gave
+me the best kind of bang for the buck in terms of understanding. So I wrote my own library. It's called ConvNetJS. It was written in Javascript, and it
+implements convolutional neural network. That was my way of learning
+about application. And so that's something that I keep
+advising people is that you not work with flow or something else. You can work with it once you have written
+at something yourself on the lowest detail, you understand everything under
+you, and now you are comfortable to. Now, it's possible to use some these
+frameworks that abstract some of it away from you, but
+you know what's under the hood. And so that's been something
+that helped me the most. That's something that people appreciate
+the most when they take 231n, and that's what I would
+advise a lot of people. >> So rather than run neural network,
+and it'll all happen like that. >> Yeah, and in some kind of sequence of
+layers, and I know that when I add some dropout layers, it makes it work better,
+like that's not what you want. In that case, you're not going
+to be able to debug effectively, you're not going to be able to
+improve on models effectively. >> Yeah, with that answer, I'm really glad
+that deep learning course got AI course. It starts a lot with many weeks of Python
+programming first and then [INAUDIBLE]. >> Yeah, good, good. >> Thank you very much for
+sharing your insights and advice. You're already heroes of many people
+in the deep learning world, so I'm really glad, really grateful
+you could join us here today. >> Yeah, thank you for having me.

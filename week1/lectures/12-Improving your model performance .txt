@@ -1,0 +1,55 @@
+You have heard about orthogonalization. How to set up your dev and test sets,
+human level performance as a proxy for Bayes's error and how to estimate
+your avoidable bias and variance. Let's pull it all together
+into a set of guidelines for how to improve the performance
+of your learning algorithm. So, I think getting a supervised learning
+algorithm to work well means fundamentally hoping or
+assuming that you can do two things. First is that you can fit
+the training set pretty well and you can think of this as roughly saying
+that you can achieve low avoidable bias. And the second thing you're assuming
+can do well is that doing well in the training set generalizes pretty
+well to the dev set or the test set and this is sort of saying that
+variance is not too bad. And in the spirit of thought organization, what you see is that there's a second
+set of knobs to fix the avoidable bias issues such as training
+[INAUDIBLE] or training longer. And there's a separate set of things you
+can use to address Damien's problems, such as regularization or
+getting more training data. So to summarize of the process
+seen in the last several videos, if you want to improve the performance
+of your machine on your system, I would recommend looking at the
+difference between your training error and your proxy for base error and this gives
+you a sense of the avoidable bias. In other words, just how much better do
+you think you should be trying to do on your training set and then look at
+the difference between your dev error and your training error as an estimate. So, it's how much of
+a variance problem you have. In other words, how much harder you should be working to
+make your performance generalize from the training set to the desk set,
+that it wasn't trained on explicitly? So to whatever extent you want
+to try to reduce avoidable bias, I would try to apply tactics
+like train a bigger model. So, you can just do better on your
+training sets or train longer. Use a better optimization
+algorithm such as. Adds momentum or RMS prop, or use a better algorithm like ADOM. Or one of the thing you could try is to
+just find a better new nether architecture or better said, hyperparameters and this
+could include everything from changing the activation functions or changing
+the number of layers or hidden do this. Although you do that, it would be in
+the direction of increasing the model size to China other models or other models
+architectures, such as the current neural network and competitive neural networks
+which we'll see in later courses. Whether or
+not a new neural network architecture will fit your training set better is
+sometimes hard to tell in events, but sometimes you can get much better
+results with a better architecture. Next to the extent that you
+find out variance is a problem. Some of the many of the techniques you
+could try, then includes the following. You can try to get more data,
+because getting more data to train on could help you generalize better to
+dev set data that you didn't see. You could try regularization. So this includes things like or dropout, or data augmentation which she talks
+about the in the previous course. Or once again, you can also try
+various neural network architecture, hyperparameters search to
+see if that can help you find a new architecture that
+is better suited for problem. I think that this notion of bias or
+avoidable bias and there is one of those things that
+easily learned, but tough to master and we're able to systematically find
+the concept from this week's videos. You actually be much more efficient and
+much more systematic and much more strategic than a lot of machine learning
+teams in terms of how to systematically go by improving the performance
+of their machine learning system. So, that this week's whole work
+will allow you to practice and exercise more your understanding
+of these concepts. Best of luck with this homework and I look forward to also seeing
+you in next week's videos. Variances are further

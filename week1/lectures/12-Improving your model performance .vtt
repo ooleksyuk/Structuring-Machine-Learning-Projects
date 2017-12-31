@@ -1,0 +1,311 @@
+WEBVTT
+
+1
+00:00:00.360 --> 00:00:01.805
+You have heard about orthogonalization.
+
+2
+00:00:01.805 --> 00:00:06.561
+How to set up your dev and test sets,
+human level performance as a proxy for
+
+3
+00:00:06.561 --> 00:00:11.110
+Bayes's error and how to estimate
+your avoidable bias and variance.
+
+4
+00:00:11.110 --> 00:00:14.121
+Let's pull it all together
+into a set of guidelines for
+
+5
+00:00:14.121 --> 00:00:17.473
+how to improve the performance
+of your learning algorithm.
+
+6
+00:00:17.473 --> 00:00:22.149
+So, I think getting a supervised learning
+algorithm to work well means fundamentally
+
+7
+00:00:22.149 --> 00:00:24.656
+hoping or
+assuming that you can do two things.
+
+8
+00:00:24.656 --> 00:00:30.015
+First is that you can fit
+the training set pretty well and
+
+9
+00:00:30.015 --> 00:00:37.670
+you can think of this as roughly saying
+that you can achieve low avoidable bias.
+
+10
+00:00:38.830 --> 00:00:42.992
+And the second thing you're assuming
+can do well is that doing well in
+
+11
+00:00:42.992 --> 00:00:47.369
+the training set generalizes pretty
+well to the dev set or the test set and
+
+12
+00:00:47.369 --> 00:00:50.488
+this is sort of saying that
+variance is not too bad.
+
+13
+00:00:50.488 --> 00:00:53.717
+And in the spirit of thought organization,
+
+14
+00:00:53.717 --> 00:00:58.779
+what you see is that there's a second
+set of knobs to fix the avoidable
+
+15
+00:00:58.779 --> 00:01:03.245
+bias issues such as training
+[INAUDIBLE] or training longer.
+
+16
+00:01:03.245 --> 00:01:08.635
+And there's a separate set of things you
+can use to address Damien's problems,
+
+17
+00:01:08.635 --> 00:01:12.369
+such as regularization or
+getting more training data.
+
+18
+00:01:12.369 --> 00:01:16.543
+So to summarize of the process
+seen in the last several videos,
+
+19
+00:01:16.543 --> 00:01:21.190
+if you want to improve the performance
+of your machine on your system,
+
+20
+00:01:21.190 --> 00:01:26.234
+I would recommend looking at the
+difference between your training error and
+
+21
+00:01:26.234 --> 00:01:31.163
+your proxy for base error and this gives
+you a sense of the avoidable bias.
+
+22
+00:01:31.163 --> 00:01:35.297
+In other words, just how much better do
+you think you should be trying to do on
+
+23
+00:01:35.297 --> 00:01:39.366
+your training set and then look at
+the difference between your dev error and
+
+24
+00:01:39.366 --> 00:01:41.382
+your training error as an estimate.
+
+25
+00:01:41.382 --> 00:01:43.871
+So, it's how much of
+a variance problem you have.
+
+26
+00:01:43.871 --> 00:01:44.711
+In other words,
+
+27
+00:01:44.711 --> 00:01:48.671
+how much harder you should be working to
+make your performance generalize from
+
+28
+00:01:48.671 --> 00:01:52.392
+the training set to the desk set,
+that it wasn't trained on explicitly?
+
+29
+00:02:04.393 --> 00:02:09.201
+So to whatever extent you want
+to try to reduce avoidable bias,
+
+30
+00:02:09.201 --> 00:02:13.386
+I would try to apply tactics
+like train a bigger model.
+
+31
+00:02:13.386 --> 00:02:18.124
+So, you can just do better on your
+training sets or train longer.
+
+32
+00:02:18.124 --> 00:02:21.196
+Use a better optimization
+algorithm such as.
+
+33
+00:02:24.005 --> 00:02:27.433
+Adds momentum or RMS prop,
+
+34
+00:02:27.433 --> 00:02:32.060
+or use a better algorithm like ADOM.
+
+35
+00:02:34.874 --> 00:02:39.894
+Or one of the thing you could try is to
+just find a better new nether architecture
+
+36
+00:02:39.894 --> 00:02:45.220
+or better said, hyperparameters and this
+could include everything from changing
+
+37
+00:02:45.220 --> 00:02:50.187
+the activation functions or changing
+the number of layers or hidden do this.
+
+38
+00:02:50.187 --> 00:02:55.341
+Although you do that, it would be in
+the direction of increasing the model size
+
+39
+00:02:55.341 --> 00:03:00.654
+to China other models or other models
+architectures, such as the current neural
+
+40
+00:03:00.654 --> 00:03:06.500
+network and competitive neural networks
+which we'll see in later courses.
+
+41
+00:03:06.500 --> 00:03:09.520
+Whether or
+not a new neural network architecture will
+
+42
+00:03:09.520 --> 00:03:12.800
+fit your training set better is
+sometimes hard to tell in events,
+
+43
+00:03:12.800 --> 00:03:16.570
+but sometimes you can get much better
+results with a better architecture.
+
+44
+00:03:18.500 --> 00:03:20.941
+Next to the extent that you
+find out variance is a problem.
+
+45
+00:03:20.941 --> 00:03:26.417
+Some of the many of the techniques you
+could try, then includes the following.
+
+46
+00:03:26.417 --> 00:03:30.762
+You can try to get more data,
+because getting more data to train on
+
+47
+00:03:30.762 --> 00:03:35.437
+could help you generalize better to
+dev set data that you didn't see.
+
+48
+00:03:35.437 --> 00:03:37.759
+You could try regularization.
+
+49
+00:03:37.759 --> 00:03:43.000
+So this includes things like or dropout,
+
+50
+00:03:43.000 --> 00:03:50.501
+or data augmentation which she talks
+about the in the previous course.
+
+51
+00:03:50.501 --> 00:03:55.187
+Or once again, you can also try
+various neural network architecture,
+
+52
+00:03:55.187 --> 00:03:58.467
+hyperparameters search to
+see if that can help you
+
+53
+00:03:58.467 --> 00:04:02.390
+find a new architecture that
+is better suited for problem.
+
+54
+00:04:03.810 --> 00:04:07.430
+I think that this notion of bias or
+avoidable bias and
+
+55
+00:04:07.430 --> 00:04:12.150
+there is one of those things that
+easily learned, but tough to master and
+
+56
+00:04:12.150 --> 00:04:16.090
+we're able to systematically find
+the concept from this week's videos.
+
+57
+00:04:16.090 --> 00:04:20.244
+You actually be much more efficient and
+much more systematic and much more
+
+58
+00:04:20.244 --> 00:04:24.734
+strategic than a lot of machine learning
+teams in terms of how to systematically
+
+59
+00:04:24.734 --> 00:04:28.567
+go by improving the performance
+of their machine learning system.
+
+60
+00:04:28.567 --> 00:04:32.982
+So, that this week's whole work
+will allow you to practice and
+
+61
+00:04:32.982 --> 00:04:36.832
+exercise more your understanding
+of these concepts.
+
+62
+00:04:36.832 --> 00:04:38.950
+Best of luck with this homework and
+
+63
+00:04:38.950 --> 00:04:42.463
+I look forward to also seeing
+you in next week's videos.
+
+64
+00:06:19.757 --> 00:06:20.701
+Variances are further
